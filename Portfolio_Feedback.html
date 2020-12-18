@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>Feedback</title>
+  <script>
+  function validateform(){
+  var name=document.myform.name.value;
+  var email=document.myform.email.value;
+  
+  if(name==null||name==""){
+  alert("Please enter your name");
+  return false;
+  }else if(email==null||email==""){
+  alert("Please enter your email");
+  return false;}
+  }
+  </script>
+  <style>
+
+body {
+  background-color:#F3E6F9 ;
+}
+.h1 {
+  font-family: "Times New Roman", Times, serif;
+}
+form {
+	  text-align: center;
+	  color: black;
+}
+
+</style>
+</head>
+<body  onload="window.alert('Please share your feedback!');">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+  <div class="navbar-header">
+      <a class="navbar-brand" href="Portfolio_Home.html">My Portfolio</a>
+  </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="Portfolio_Home.html">Home</a></li>
+      <li><a href="Portfolio_Education.html">Education</a></li>
+      <li><a href="Portfolio_Skill.html">Skill</a></li>
+	  <li><a href="Portfolio_Interest.html">Interest</a></li>
+	  <li><a href="Portfolio_Feedback.html">Feedback</a></li>
+    </ul>
+  </div>
+  </nav>
+<br>
+<center><h1 class="h1"<b>Share your feedback!<b></h1><center>
+<br><br><br><br>
+
+<form name="myform" method="post"
+action="abc.jsp"onsubmit="return validateform()">
+Name:<input type="text"
+name="name"><br/><br>
+Email:<input type="text"
+name="email"><br/><br>
+<TEXTAREA name="suggest" rows=5 cols=30>
+-Type here-
+</TEXTAREA>
+<br>
+<input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
